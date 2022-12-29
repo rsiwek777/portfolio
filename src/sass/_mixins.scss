@@ -1,0 +1,18 @@
+@mixin burgerBtnBars {
+	position: absolute;
+	content: '';
+	right: 0;
+	height: 3px;
+	background-color: #ffd900;
+	transition: width 0.3s;
+}
+@mixin navItemsDecoration {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 25%;
+	top: 50%;
+	background-color: #ffd900;
+	transform: scale(0);
+	transition: transform 0.5s;
+}
