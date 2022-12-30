@@ -12,8 +12,8 @@ html,
 body {
 	height: 100%;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #111;
 	color: #fff;
+	background-color: #030818;
 }
 
 html {
@@ -103,7 +103,7 @@ table {
 	height: 100vh;
 	width: 100%;
 	transition: 1s cubic-bezier();
-	transform: translateY(-200%);
+	transform: translateX(200%);
 	z-index: 1000;
 
 	&__item {
@@ -132,23 +132,107 @@ table {
 		}
 	}
 }
+
 .nav-active {
-	transform: translatey(0);
+	transform: translateX(0);
 	background: rgba(45, 45, 45, 0.4);
 	backdrop-filter: blur(10px);
 	z-index: 1000;
 }
+
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
 }
 
-@keyframes navItemsAnimation {
-	from {
-		transform: translateX(200%);
+.header__section {
+	display: flex;
+	flex-direction: column;
+
+	&-left {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 70vh;
+		background-image: url('../../dist/img/bg-img.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+
+		.profil-img {
+			width: 25rem;
+			border-radius: 50%;
+		}
+
+		.profil-text-h1 {
+			margin-top: 2rem;
+			font-size: 2.8rem;
+			text-shadow: 0 0 4px #fff;
+		}
+
+		.profil-text-p {
+			margin-top: 1rem;
+			font-size: 1.8rem;
+		}
 	}
-	to {
-		transform: translateX(0);
+
+	&-right {
+		height: 30vh;
+		padding: 4rem;
+
+		.aboutme-heading {
+			font-family: 'Courier New', monospace;
+			font-weight: lighter;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+			font-size: 2.4rem;
+			color: #ffd900;
+		}
+
+		.aboutme-text {
+			font-size: 1.6rem;
+		}
 	}
+}
+
+.main {
+	height: 50vh;
+}
+
+.wave {
+	position: relative;
+	.custom-shape-divider-bottom-1672363873 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.custom-shape-divider-bottom-1672363873 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 40px;
+	}
+
+	.custom-shape-divider-bottom-1672363873 .shape-fill {
+		fill: rgb(88, 80, 45);
+	}
+}
+
+.footer {
+	position: relative;
+	text-align: center;
+	padding: 1rem 0;
+	font-size: 1.2rem;
+	background-color: rgb(88, 80, 45);
+	color: #fff;
+	margin-top: 9rem;
 }
 
 @media (min-width: 1200px) {
@@ -160,5 +244,59 @@ table {
 
 	.nav-active {
 		transform: translateX(100%);
+	}
+
+	.header__section {
+		flex-direction: row;
+
+		&-left,
+		&-right {
+			width: 50%;
+			height: 100vh;
+		}
+
+		&-left {
+			position: sticky;
+			top: 0;
+
+			.profil-img {
+				width: 40rem;
+			}
+
+			.profil-text-h1 {
+				font-size: 4.5rem;
+			}
+
+			.profil-text-p {
+				font-size: 2.2rem;
+			}
+		}
+
+		&-right {
+			padding: 10rem;
+
+			.aboutme-heading {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	.wave {
+		.custom-shape-divider-bottom-1672363873 svg {
+			height: 70px;
+		}
+	}
+
+	.footer {
+		font-size: 1.4rem;
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
 	}
 }

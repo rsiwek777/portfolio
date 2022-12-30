@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.burger-btn')
 const nav = document.querySelector('.nav')
 const navItems = document.querySelectorAll('.nav__item')
+const text = document.querySelector('.sec-text')
 
 burgerBtn.addEventListener('click', () => {
 	nav.classList.toggle('nav-active')
