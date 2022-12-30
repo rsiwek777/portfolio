@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <title>Radosław Siwek</title>
 </head>
@@ -28,7 +29,7 @@
 
     <nav class="nav">
         <div class="nav__items">
-            <a class="nav__item" href="#">About me</a>
+            <a class="nav__item" href="#aboutme">About me</a>
             <a class="nav__item" href="#skills">Skills</a>
             <a class="nav__item" href="#projects">Projects</a>
             <a class="nav__item" href="#contact">Contact</a>
@@ -45,33 +46,58 @@
 
     <header class="header__section">
         <div class="header__section-content">
-            <img class="profil-img" src="./dist/img/bleach.png" alt="profil image">
-            <h1 class="profil-text-h1">Hi! My name is Radek!</h1>
-            <p class="profil-text-p">I'm Front-end Developer</p>
+            <img data-aos-mirror="true" data-aos="fade-down" data-aos-duration="1500" class="profil-img"
+                src="./dist/img/bleach.png" alt="profil image">
+            <h1 data-aos-mirror="true" data-aos="fade-down" data-aos-duration="1500" class="profil-text-h1">Hi! My name
+                is Radek!</h1>
+            <p data-aos-mirror="true" data-aos="fade-down" data-aos-duration="1500" class="profil-text-p">I'm Front-end
+                Developer</p>
         </div>
     </header>
 
     <main class="main">
-        <div class="aboutme__section wrapper">
-            <h2 class="section-heading">&#60; about me &#47;&#62;</h2>
-            <p class="aboutme-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iusto fuga quas
-                inventore in magnam voluptas iure provident recusandae ipsam alias, enim illo facilis eos, totam sequi.
+        <i class="fa-solid fa-xmark decoration-icon decoration-icon-first"></i>
+        <i class="fa-solid fa-xmark decoration-icon decoration-icon-second"></i>
+        <div id="aboutme" class="aboutme__section section-padding wrapper">
+            <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
+                data-aos-delay="100" class="section-heading">&#60; about me &#47;&#62;</h2>
+            <p data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
+                data-aos-delay="100" class="aboutme-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Adipisci possimus
+                aspernatur neque, dolores impedit similique? Laborum maiores cupiditate labore totam quibusdam
+                reiciendis laudantium delectus nesciunt necessitatibus veniam nemo, unde sit maxime vel est incidunt
+                dolore! Cum sed enim eligendi, itaque, explicabo veritatis eum culpa velit aliquam, labore voluptate
+                optio mollitia.
             </p>
         </div>
 
-        <section id="skills" class="skills__section wrapper">
-            <h2 class="section-heading">&#60; Skills &#47;&#62;</h2>
-            <div class="skills__section-content"></div>
+        <section id="skills" class="skills__section section-padding wrapper">
+            <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-delay="100" class="section-heading">&#60; Skills &#47;&#62;</h2>
+            <div data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-delay="100" class="skills__section-content">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-sass"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-git-alt"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
         </section>
 
-        <section id="projects" class="projects__section wrapper">
-            <h2 class="section-heading">&#60; Projects &#47;&#62;</h2>
-            <div class="projects__section-content"></div>
+        <section id="projects" class="projects__section section-padding wrapper">
+            <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
+                data-aos-delay="100" class="section-heading">&#60; Projects &#47;&#62;</h2>
+            <div data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
+                data-aos-delay="100" class="projects__section-content"></div>
         </section>
 
-        <section id="contact" class="contact__section wrapper">
-            <h2 class="section-heading">&#60; Contact &#47;&#62;</h2>
-            <div class="contact__section-content"></div>
+        <section id="contact" class="contact__section section-padding wrapper">
+            <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-delay="100" class="section-heading">&#60; Contact &#47;&#62;</h2>
+            <div data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-delay="100" class="contact__section-content"></div>
         </section>
     </main>
 
@@ -95,6 +121,10 @@
         <p class="footer-text"> &copy; 2022 | Radosław Siwek </p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./dist/js/script.min.js"></script>
 </body>
 

@@ -59,9 +59,32 @@ table {
 	font-weight: lighter;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 	font-size: 2.4rem;
 	color: #ffd900;
+}
+
+.section-padding {
+	padding: 6.5rem 5rem;
+}
+
+.decoration-icon {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.1);
+	z-index: -10;
+
+	&-first {
+		top: 60%;
+		left: -5%;
+		font-size: 35rem;
+		animation: decorationIconAnimationRight linear 90s infinite;
+	}
+	&-second {
+		top: 80%;
+		left: 80%;
+		font-size: 15rem;
+		animation: decorationIconAnimationLeft linear 30s infinite;
+	}
 }
 
 .burger-btn {
@@ -150,12 +173,12 @@ table {
 			a,
 			.tooltip {
 				color: #ffd900;
-				transition: transform 0.3s;
+				transition: color 0.3s;
 			}
 
 			a:hover,
 			.tooltip:hover {
-				transform: scale(1.2);
+				color: #e8b211;
 			}
 
 			.tooltip {
@@ -208,7 +231,7 @@ table {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 70vh;
+		height: 75vh;
 		background-image: url('../../dist/img/bg-img.jpg');
 		background-position: center;
 		background-size: cover;
@@ -234,12 +257,45 @@ table {
 }
 
 .main {
-	margin-top: 5rem;
-	.aboutme__section {
-		padding: 0 4rem;
+	z-index: 1;
+	position: relative;
+	overflow-x: hidden;
+	.aboutme-text {
+		font-size: 1.6rem;
+		text-align: center;
+	}
 
-		.aboutme-text {
-			font-size: 1.6rem;
+	.skills__section {
+		background-color: rgba(255, 255, 255, 0.1);
+		.skills__section-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex-direction: row;
+			gap: 4rem;
+
+			.fa-brands {
+				font-size: 5rem;
+			}
+			.fa-html5 {
+				color: #e05a3a;
+			}
+			.fa-css3-alt {
+				color: #2680c0;
+			}
+			.fa-js {
+				color: #f8d24b;
+			}
+			.fa-sass {
+				color: #c07093;
+			}
+			.fa-bootstrap {
+				color: #7e38d8;
+			}
+			.fa-git-alt {
+				color: #ff4500;
+			}
 		}
 	}
 }
@@ -281,7 +337,18 @@ table {
 @media (min-width: 1200px) {
 	.section-heading {
 		font-size: 4rem;
-		margin-top: 10rem;
+	}
+
+	.decoration-icon {
+		&-first {
+			left: 10%;
+		}
+
+		&-second {
+			top: 8%;
+			left: 90%;
+			font-size: 20rem;
+		}
 	}
 
 	.nav {
@@ -297,7 +364,7 @@ table {
 	.header__section {
 		&-content {
 			.profil-img {
-				width: 40rem;
+				width: 30rem;
 			}
 
 			.profil-text-h1 {
@@ -311,8 +378,12 @@ table {
 	}
 
 	.main {
-		.aboutme__section {
-			padding: 0 10rem;
+		.skills__section {
+			border-radius: 200px;
+
+			.skills__section-content {
+				gap: 7.5rem;
+			}
 		}
 	}
 
@@ -333,5 +404,23 @@ table {
 	}
 	to {
 		transform: translateX(0);
+	}
+}
+
+@keyframes decorationIconAnimationRight {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes decorationIconAnimationLeft {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
 	}
 }

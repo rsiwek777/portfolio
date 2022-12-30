@@ -18,6 +18,12 @@ const copyContent = async () => {
 	}, 1500)
 }
 
+navItems.forEach(e =>
+	e.addEventListener('click', () => {
+		nav.classList.remove('nav-active')
+	})
+)
+
 burgerBtn.addEventListener('click', () => {
 	nav.classList.toggle('nav-active')
 	let delayTime = 0
