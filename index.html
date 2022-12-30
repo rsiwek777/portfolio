@@ -32,24 +32,47 @@
             <a class="nav__item" href="#skills">Skills</a>
             <a class="nav__item" href="#projects">Projects</a>
             <a class="nav__item" href="#contact">Contact</a>
+            <div class="nav__item-socials">
+                <a href="https://github.com/rsiwek777" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/radoslaw.siwek/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <button onclick="copyContent()" class="tooltip"><i class="fa-brands fa-discord"></i>
+                    <span class="tooltiptext">kozackikozak#0103</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <header class="header__section">
-        <div class="header__section-left">
+        <div class="header__section-content">
             <img class="profil-img" src="./dist/img/bleach.png" alt="profil image">
             <h1 class="profil-text-h1">Hi! My name is Radek!</h1>
             <p class="profil-text-p">I'm Front-end Developer</p>
         </div>
-
-        <div class="header__section-right wrapper">
-            <h2 class="aboutme-heading">&#60; about me &#47;&#62;</h2>
-            <p class="aboutme-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
     </header>
 
     <main class="main">
-        <section id="skills" class="skills__section"></section>
+        <div class="aboutme__section wrapper">
+            <h2 class="section-heading">&#60; about me &#47;&#62;</h2>
+            <p class="aboutme-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iusto fuga quas
+                inventore in magnam voluptas iure provident recusandae ipsam alias, enim illo facilis eos, totam sequi.
+            </p>
+        </div>
+
+        <section id="skills" class="skills__section wrapper">
+            <h2 class="section-heading">&#60; Skills &#47;&#62;</h2>
+            <div class="skills__section-content"></div>
+        </section>
+
+        <section id="projects" class="projects__section wrapper">
+            <h2 class="section-heading">&#60; Projects &#47;&#62;</h2>
+            <div class="projects__section-content"></div>
+        </section>
+
+        <section id="contact" class="contact__section wrapper">
+            <h2 class="section-heading">&#60; Contact &#47;&#62;</h2>
+            <div class="contact__section-content"></div>
+        </section>
     </main>
 
     <footer class="footer">

@@ -54,6 +54,16 @@ table {
 	max-width: 1200px;
 }
 
+.section-heading {
+	font-family: 'Courier New', monospace;
+	font-weight: lighter;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	font-size: 2.4rem;
+	color: #ffd900;
+}
+
 .burger-btn {
 	position: fixed;
 	top: 2rem;
@@ -130,6 +140,51 @@ table {
 		&:hover::after {
 			transform: scale(1);
 		}
+
+		&-socials {
+			display: flex;
+			justify-content: center;
+			font-size: 3rem;
+			gap: 3rem;
+
+			a,
+			.tooltip {
+				color: #ffd900;
+				transition: transform 0.3s;
+			}
+
+			a:hover,
+			.tooltip:hover {
+				transform: scale(1.2);
+			}
+
+			.tooltip {
+				background: none;
+				position: relative;
+				display: inline-block;
+				font-size: 3rem;
+			}
+
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				width: 15rem;
+				background-color: #000;
+				color: #fff;
+				text-align: center;
+				padding: 0.5rem 0;
+				border-radius: 6px;
+				position: absolute;
+				z-index: 1;
+				top: 105%;
+				left: 50%;
+				margin-left: -7.5rem;
+			}
+
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+				font-size: 1.2rem;
+			}
+		}
 	}
 }
 
@@ -148,8 +203,7 @@ table {
 	display: flex;
 	flex-direction: column;
 
-	&-left {
-		position: relative;
+	&-content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -169,6 +223,7 @@ table {
 			margin-top: 2rem;
 			font-size: 2.8rem;
 			text-shadow: 0 0 4px #fff;
+			font-family: Tahoma, sans-serif;
 		}
 
 		.profil-text-p {
@@ -176,29 +231,17 @@ table {
 			font-size: 1.8rem;
 		}
 	}
+}
 
-	&-right {
-		height: 30vh;
-		padding: 4rem;
-
-		.aboutme-heading {
-			font-family: 'Courier New', monospace;
-			font-weight: lighter;
-			text-align: center;
-			text-transform: uppercase;
-			margin-bottom: 2rem;
-			font-size: 2.4rem;
-			color: #ffd900;
-		}
+.main {
+	margin-top: 5rem;
+	.aboutme__section {
+		padding: 0 4rem;
 
 		.aboutme-text {
 			font-size: 1.6rem;
 		}
 	}
-}
-
-.main {
-	height: 50vh;
 }
 
 .wave {
@@ -236,29 +279,23 @@ table {
 }
 
 @media (min-width: 1200px) {
+	.section-heading {
+		font-size: 4rem;
+		margin-top: 10rem;
+	}
+
 	.nav {
 		height: 100vh;
-		width: 50%;
-		transform: translateX(200%);
+		width: 25%;
+		transform: translateX(400%);
 	}
 
 	.nav-active {
-		transform: translateX(100%);
+		transform: translateX(300%);
 	}
 
 	.header__section {
-		flex-direction: row;
-
-		&-left,
-		&-right {
-			width: 50%;
-			height: 100vh;
-		}
-
-		&-left {
-			position: sticky;
-			top: 0;
-
+		&-content {
 			.profil-img {
 				width: 40rem;
 			}
@@ -271,13 +308,11 @@ table {
 				font-size: 2.2rem;
 			}
 		}
+	}
 
-		&-right {
-			padding: 10rem;
-
-			.aboutme-heading {
-				font-size: 4rem;
-			}
+	.main {
+		.aboutme__section {
+			padding: 0 10rem;
 		}
 	}
 
