@@ -219,38 +219,59 @@
 		color: rgba(255, 255, 255, 0.5);
 	}
 
-	.projects__section-content {
-		display: flex;
-		justify-content: center;
-
-		img {
-			width: 100%;
-		}
-
-		.projects-box {
-			position: relative;
-			width: 100%;
+	.projects__section {
+		padding: 6.5rem 1rem;
+		.projects__section-content {
 			display: flex;
-			flex-direction: column;
-			margin: 2em;
-			list-style: none;
-		}
-
-		.projects-box li {
-			position: relative;
-			margin-bottom: 2em;
-			width: 100%;
-			border: 1px solid #ffd900;
-			border-radius: 8px;
-			overflow: hidden;
+			justify-content: center;
 
 			img {
-				transition: transform 0.3s;
+				width: 100%;
 			}
-		}
 
-		.projects-box img:hover {
-			transform: scale(1.1);
+			.projects-box {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				margin: 2em;
+				list-style: none;
+			}
+
+			.projects-box li {
+				position: relative;
+				margin-bottom: 2em;
+				width: 100%;
+				border: 1px solid #ffd900;
+				border-radius: 8px;
+				overflow: hidden;
+
+				img {
+					transition: transform 0.3s;
+				}
+
+				.github-repo-button {
+					position: absolute;
+					bottom: 1rem;
+					left: 1rem;
+					padding: 1rem 2rem;
+					font-size: 2rem;
+					background: rgba(0, 0, 0, 0.75);
+					border: 1px solid #ffc825;
+					backdrop-filter: blur(5px);
+					color: #fff;
+					border-radius: 8px;
+					transition: color 0.3s;
+
+					&:hover {
+						color: #ffc825;
+					}
+				}
+			}
+
+			.projects-box img:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 }

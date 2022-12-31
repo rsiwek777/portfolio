@@ -54,17 +54,19 @@
 			}
 		}
 
-		.projects__section-content {
-			.projects-box {
-				width: 100%;
-			}
+		.projects__section {
+			.projects__section-content {
+				.projects-box {
+					width: 100%;
+				}
 
-			.projects-box li {
-				width: 75%;
-				display: flex;
+				.projects-box li {
+					width: 75%;
+					display: flex;
 
-				&:nth-child(even) {
-					align-self: flex-end;
+					&:nth-child(even) {
+						align-self: flex-end;
+					}
 				}
 			}
 		}
