@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	background-color: #030818;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select,
+ul {
+	font-family: inherit;
+	list-style: none;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+textarea {
+	resize: vertical;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-heading {
+	font-family: 'Courier New', monospace;
+	font-weight: lighter;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	font-size: 2.4rem;
+	color: #ffd900;
+}
+
+.section-padding {
+	padding: 6.5rem 5rem;
+}
+
+.decoration-icon {
+	position: absolute;
+	color: rgba(255, 255, 255, 0.1);
+	z-index: -10;
+
+	&-first {
+		top: 60%;
+		left: -5%;
+		font-size: 35rem;
+		animation: decorationIconAnimationRight linear 90s infinite;
+	}
+
+	&-second {
+		top: 80%;
+		left: 80%;
+		font-size: 15rem;
+		animation: decorationIconAnimationLeft linear 30s infinite;
+	}
+
+	&-third {
+		top: 20%;
+		left: 80%;
+		font-size: 25rem;
+		animation: decorationIconAnimationLeft linear 50s infinite;
+	}
+
+	&-four {
+		top: 50%;
+		left: 90%;
+		font-size: 15rem;
+		animation: decorationIconAnimationRight linear 20s infinite;
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes decorationIconAnimationRight {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes decorationIconAnimationLeft {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
