@@ -51,6 +51,7 @@
 	transition: 1s cubic-bezier();
 	transform: translateX(200%);
 	z-index: 1000;
+	opacity: 0;
 
 	&__item {
 		position: relative;
@@ -129,6 +130,7 @@
 	background: rgba(45, 45, 45, 0.4);
 	backdrop-filter: blur(10px);
 	z-index: 1000;
+	opacity: 1;
 }
 
 .nav-items-animation {
