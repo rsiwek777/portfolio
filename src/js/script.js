@@ -2,6 +2,7 @@ const burgerBtn = document.querySelector('.burger-btn')
 const nav = document.querySelector('.nav')
 const navItems = document.querySelectorAll('.nav__item')
 const text = document.querySelector('.tooltiptext')
+const footerYear = document.querySelector('.footer__year')
 
 const copyContent = async () => {
 	try {
@@ -23,6 +24,12 @@ navItems.forEach(e =>
 		nav.classList.remove('nav-active')
 	})
 )
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+handleCurrentYear()
 
 burgerBtn.addEventListener('click', () => {
 	nav.classList.toggle('nav-active')

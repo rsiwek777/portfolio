@@ -60,12 +60,9 @@
             <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
                 data-aos-delay="100" class="section-heading">&#60; about me &#47;&#62;</h2>
             <p data-aos-mirror="true" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1000"
-                data-aos-delay="100" class="aboutme-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Adipisci possimus
-                aspernatur neque, dolores impedit similique? Laborum maiores cupiditate labore totam quibusdam
-                reiciendis laudantium delectus nesciunt necessitatibus veniam nemo, unde sit maxime vel est incidunt
-                dolore! Cum sed enim eligendi, itaque, explicabo veritatis eum culpa velit aliquam, labore voluptate
-                optio mollitia.
+                data-aos-delay="100" class="aboutme-text">My name is Radek and I’m 20 years old. I am from Poland. I
+                graduated from high school as an IT technician. In the 2022 I started learning programming,
+                specifically web and application development. I am interested in manga, anime, automotive and travel.
             </p>
         </div>
 
@@ -83,8 +80,8 @@
                 <i class="fa-brands fa-github"></i>
             </div>
             <p data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
-                data-aos-delay="100" class="skills__section-p">*Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio, explicabo!*</p>
+                data-aos-delay="100" class="skills__section-p">*I am still improving my skills and learning new
+                languages and technologies.*</p>
         </section>
 
         <section id="projects" class="projects__section section-padding wrapper">
@@ -125,7 +122,13 @@
             <h2 data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
                 data-aos-delay="100" class="section-heading">&#60; Contact &#47;&#62;</h2>
             <div data-aos-mirror="true" data-aos-offset="0" data-aos="fade-left" data-aos-duration="1000"
-                data-aos-delay="100" class="contact__section-content"></div>
+                data-aos-delay="100" class="contact__section-content">
+                <form class="contact-form" action="https://formsubmit.co/insired@gmail.com" method="POST">
+                    <input class="contact-form-email" type="email" name="email" placeholder="E-mail">
+                    <textarea class="contact-form-message" name="message" placeholder="Your message..."></textarea>
+                    <button class="contact-form-btn" type="submit">Send</button>
+                </form>
+            </div>
         </section>
 
         <i class="fa-solid fa-xmark decoration-icon decoration-icon-first"></i>
@@ -151,7 +154,8 @@
                 </svg>
             </div>
         </div>
-        <p class="footer-text"> &copy; 2022 | Radosław Siwek </p>
+        <p class="footer-text">&copy; <span class="footer__year"></span> | Radosław Siwek</p>
+        <p class="footer-text">insired@gmail.com</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

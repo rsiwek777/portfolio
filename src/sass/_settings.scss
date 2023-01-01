@@ -46,6 +46,11 @@ table {
 	border-spacing: 0;
 }
 
+*::selection {
+	background-color: #ffd900;
+	color: #030818;
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
