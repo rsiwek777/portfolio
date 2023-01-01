@@ -364,5 +364,9 @@
 
 	.footer-text {
 		margin-top: 1rem;
+
+		&-cv a {
+			color: rgb(208, 255, 0);
+		}
 	}
 }
